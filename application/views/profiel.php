@@ -1,0 +1,1 @@
+<p>Je bekijkt nu het profiel van gebruiker $id</p>
