@@ -1,0 +1,19 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height:100%;
+	margin: 0px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#header {
+	background-color: #bf0000;
+	color: #ffffff;
+}
+
+#footer {
+	background-color: #bf0000;
+	color: #ffffff;
+}
