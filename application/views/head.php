@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>DataDate</title>
-	<link rel="stylesheet" type="text/css" href="../public/style.css"/>
+	<link rel="stylesheet" type="text/css" href="/~4301358/wt3/public/style.css"/>
 </head>
 <body>
 	<div id="header">
