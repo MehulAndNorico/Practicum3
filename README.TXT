@@ -1,0 +1,1 @@
+Voor schermmaten smaller dan 1400 pixels of breder dan 1980 pixels zou de startpagina iets aangepast moeten worden om de twee hoofden zichtbaar te houden

@@ -43,10 +43,6 @@ body {
 	vertical-align: middle;
 }
 
-#content {
-
-}
-
 #logo {
 	float: left;
 	vertical-align: middle;
@@ -70,28 +66,39 @@ a {
 }
 
 /*voor start.php*/
-#promo {
-	width: 100%;
-}
-
-#promoachter {
-	min-height: 20vw;
+#content {
 	background-image: url(/~4301358/wt3/public/banner.jpg);
 	background-size: cover;
 	background-position: 50% 100%;
 	background-repeat: no-repeat;
-	text-align: left;
+}
+
+#promo {
+	width: 100%;
 }
 
 #promotekst {
+	text-align: left;
 	color: #ffffff;
-	width: 30%;
-	min-height: 100%;
-	background: rgb(34,34,34); /* als transparantie niet ondersteund wordt */
   	background: rgba(34,34,34,0.75);
   	padding: 0.5em;
 }
 
 #profielen {
+	display:inline-block;
+	background: rgba(34,34,34,0.75);
 	padding: 0.5em;
+}
+
+.profiel {
+	overflow: hidden;
+	width:50%;
+}
+
+.samen {
+	float: left;
+}
+
+.part {
+	float: left;
 }
