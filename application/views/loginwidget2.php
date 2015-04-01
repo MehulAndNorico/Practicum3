@@ -1,2 +1,4 @@
-<p>Je bent ingelogd als NAAM
-<div>Uitloggen</div>
+<div id="login">
+	<p>Je bent ingelogd als NAAM</p>
+	<div>Uitloggen</div>
+</div>

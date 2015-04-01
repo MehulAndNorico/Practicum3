@@ -1,3 +1,8 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
 html {
 	height: 100%;
 }
@@ -5,15 +10,88 @@ html {
 body {
 	min-height:100%;
 	margin: 0px;
+	background-color: #500000;
+	color: #ffffff;
 	font-family: Tahoma, Geneva, sans-serif;
+	margin-left: 3vw;
+	margin-right: 3vw;
+	display: block;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
 }
 
 #header {
-	background-color: #bf0000;
+	background-color: #900000;
 	color: #ffffff;
+	text-align: center;
+	display: inline-block !important;
+	/*float: center;*/
+	width: calc(100% - 1em);
+	padding: 0.5em;
+	border-bottom: 1px solid white;
+	/*Dit mag eigenlijk niet, maar ik kan het randje niet meer aan zien nu ik zo veel tijd heb gestopt in het proberen van het wegalen ervan*/
+	margin-bottom: -4px;
+}
+
+#header h1 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#header h2 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#content {
+
+}
+
+#logo {
+	float: left;
+	vertical-align: middle;
+}
+
+#login {
+	float: right;
+	vertical-align: middle;
 }
 
 #footer {
-	background-color: #bf0000;
+	background-color: #900000;
 	color: #ffffff;
+	text-align: center;
+	border-top: 1px solid white;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/*voor start.php*/
+#promo {
+	width: 100%;
+}
+
+#promoachter {
+	min-height: 20vw;
+	background-image: url(/~4301358/wt3/public/banner.jpg);
+	background-size: cover;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	text-align: left;
+}
+
+#promotekst {
+	color: #ffffff;
+	width: 30%;
+	min-height: 100%;
+	background: rgb(34,34,34); /* als transparantie niet ondersteund wordt */
+  	background: rgba(34,34,34,0.75);
+  	padding: 0.5em;
+}
+
+#profielen {
+	padding: 0.5em;
 }

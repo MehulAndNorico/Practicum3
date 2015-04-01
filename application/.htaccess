@@ -4,6 +4,3 @@
 <IfModule !authz_core_module>
     Deny from all
 </IfModule>
-RewriteEngine on
-RewriteCond $1 !^(index\.php|img|js|css|robots\.txt)
-RewriteRule ^(.*)$ /~4301358/wt3/index.php/$1 [L]
