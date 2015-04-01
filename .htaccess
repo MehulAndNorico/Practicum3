@@ -1,0 +1,4 @@
+RewriteEngine on
+#RewriteCond $1 !^(index\.php|img|js|css|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /~4301358/wt3/index.php/$1 [L]
