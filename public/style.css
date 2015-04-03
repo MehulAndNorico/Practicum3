@@ -22,19 +22,11 @@ body {
 	color: #ffffff;
 	text-align: center;
 	display: inline-block !important;
-	/*float: center;*/
-	width: calc(100% - 1em - 6vw);
-	/*width: 100%;*/
+	width: calc(100% - 1em);
 	padding: 0.5em;
 	border: 1px solid white;
 	/*Dit mag eigenlijk niet, maar ik kan het randje niet meer aan zien nu ik zo veel tijd heb gestopt in het proberen van het wegalen ervan*/
 	margin-bottom: -4px;
-
-	position: fixed;
-	top: 0px;
-	margin: auto;
-	z-index: 100;
-	text-align: justify;
 }
 
 #logo {
@@ -50,38 +42,14 @@ body {
 }
 
 #content {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-}
-
-#footer {
-	background-color: #900000;
-	color: #ffffff;
-	text-align: center;
-	border: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	width: calc(100% - 1em);
+	background: rgba(34,34,34,0.75);
+	padding: 0.5em;
 }
 
 a {
 	text-decoration: none;
 	color: #ffffff;
-}
-
-/*voor start.php*/
-
-
-#promo {
-	width: 100%;
-}
-
-#promotekst {
-	text-align: left;
-	color: #ffffff;
-  	background: rgba(34,34,34,0.75);
-  	padding: 0.5em;
-}
-
-#profielen {
-	display:inline-block;
-	background: rgba(34,34,34,0.75);
-	padding: 0.5em;
 }

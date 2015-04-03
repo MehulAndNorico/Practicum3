@@ -23,6 +23,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				}
 			?>
 		</div>
-		<div id="spacer">
-			<img src="/~4301358/wt3/public/logo.png"/>
-		</div>
