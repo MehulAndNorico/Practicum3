@@ -3,21 +3,18 @@
 	margin: 0px;
 }
 
-html {
-	height: 100%;
-}
-
 body {
-	min-height:100%;
-	margin: 0px;
-	background-color: #500000;
 	color: #ffffff;
 	font-family: Tahoma, Geneva, sans-serif;
 	margin-left: 3vw;
 	margin-right: 3vw;
 	display: block;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
+
+	background-image: url(/~4301358/wt3/public/banner.jpg);
+	background-size: cover;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 #header {
@@ -26,38 +23,42 @@ body {
 	text-align: center;
 	display: inline-block !important;
 	/*float: center;*/
-	width: calc(100% - 1em);
+	width: calc(100% - 1em - 6vw);
+	/*width: 100%;*/
 	padding: 0.5em;
-	border-bottom: 1px solid white;
+	border: 1px solid white;
 	/*Dit mag eigenlijk niet, maar ik kan het randje niet meer aan zien nu ik zo veel tijd heb gestopt in het proberen van het wegalen ervan*/
 	margin-bottom: -4px;
-}
 
-#header h1 {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#header h2 {
-	display: inline-block;
-	vertical-align: middle;
+	position: fixed;
+	top: 0px;
+	margin: auto;
+	z-index: 100;
+	text-align: justify;
 }
 
 #logo {
 	float: left;
-	vertical-align: middle;
 }
 
 #login {
 	float: right;
-	vertical-align: middle;
+}
+
+#spacer {
+	padding: 0.5em;
+}
+
+#content {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 }
 
 #footer {
 	background-color: #900000;
 	color: #ffffff;
 	text-align: center;
-	border-top: 1px solid white;
+	border: 1px solid white;
 }
 
 a {
@@ -66,12 +67,7 @@ a {
 }
 
 /*voor start.php*/
-#content {
-	background-image: url(/~4301358/wt3/public/banner.jpg);
-	background-size: cover;
-	background-position: 50% 100%;
-	background-repeat: no-repeat;
-}
+
 
 #promo {
 	width: 100%;
@@ -88,17 +84,4 @@ a {
 	display:inline-block;
 	background: rgba(34,34,34,0.75);
 	padding: 0.5em;
-}
-
-.profiel {
-	overflow: hidden;
-	width:50%;
-}
-
-.samen {
-	float: left;
-}
-
-.part {
-	float: left;
 }
