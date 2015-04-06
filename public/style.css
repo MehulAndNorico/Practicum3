@@ -6,8 +6,7 @@
 body {
 	color: #ffffff;
 	font-family: Tahoma, Geneva, sans-serif;
-	margin-left: 3vw;
-	margin-right: 3vw;
+	margin: 3vw;
 	display: block;
 
 	background-image: url(/~4301358/wt3/public/banner.jpg);
@@ -25,20 +24,39 @@ body {
 	width: calc(100% - 1em);
 	padding: 0.5em;
 	border: 1px solid white;
+	border-bottom: none;
 	/*Dit mag eigenlijk niet, maar ik kan het randje niet meer aan zien nu ik zo veel tijd heb gestopt in het proberen van het wegalen ervan*/
 	margin-bottom: -4px;
 }
 
 #logo {
-	float: left;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#login {
-	float: right;
-}
-
-#spacer {
+.nav {
+	background-color: #900000;
+	color: #ffffff;
+	text-align: center;
+	display: inline-block !important;
+	width: calc(100% - 1em);
 	padding: 0.5em;
+	border: 1px solid white;
+}
+
+.nav a {
+	margin-left: 1em;
+	margin-right: 1em;
+	display:inline-block; 
+}
+
+.nav a h4 {
+	display:inline-block; 
+}
+
+.nav h4 {
+	display:inline-block; 
 }
 
 #achter {

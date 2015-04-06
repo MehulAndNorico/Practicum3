@@ -9,12 +9,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</head>
 	<body>
 		<div id="header">
-			<div id="logo">
-				<a href="start"><img src="/~4301358/wt3/public/logo.png"/></a>
-			</div>
-			<?php
-				echo $loginwidget;
-			?>
+			<a id='logo' href="start"><img src="/~4301358/wt3/public/logo.png"/></a>
 		</div>
+		<?php
+			echo $nav;
+		?>
 		<div id='achter'>
 			<div id="content">
