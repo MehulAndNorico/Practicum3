@@ -6,3 +6,6 @@ Banner1: http://picography.co/photos/look/ The Look van Dave Meier
 http://www.splitshire.com/driving-on-highway/ Driving On Highway van SplitShire *niet op telefoon tijdens het rijden
 http://www.splitshire.com/couple-in-love/ Lovers van SplitShire
 http://www.splitshire.com/couple-kissing/ Couple Kissing van SplitShire
+
+Streepjes: http://www.stripegenerator.com/ size 2 spacing 10
+Lettertype van logo: http://www.1001fonts.com/love-letters-font.html

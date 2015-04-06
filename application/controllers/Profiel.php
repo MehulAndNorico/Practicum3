@@ -2,21 +2,29 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Profiel extends CI_Controller {
-	//http://www.students.science.uu.nl/~4301358/webtechnologie3/index.php/profiel/bekijk/3
-	public function bekijk($id)
+	public function bekijk()
 	{
 		$data = array();
-		$data['id'] = $id;
+		$this->load->database();
+		
+		$nickname = $this->uri->uri_to_assoc()['nickname'];
+		
+		echo $nickname;
+		/*
+		$sql = "SELECT * FROM gebruikers WHERE nickname = ?";
+		$query = $this->db->query($sql, array($nickname));
+		$data['result'] = $query->row();
+		*/
 
-		$this->load->view('head');
-		$this->load->view('profiel', $data);
+		$this->load->model('Profiel_model');
+		$data['gegevens'] = $this->Profiel_model->getInfo($nickname);
+
+		$data['loginwidget'] = $this->load->view('loginwidget', $data, true);
+		$this->load->view('head', $data);
+		$this->load->view('profiel');
 		$this->load->view('foot');
 	}
 
-	public function index()
-	{
-		$this->load->view('head');
-		$this->load->view('foot');
-	}
+
 }
 ?>

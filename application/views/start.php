@@ -9,7 +9,7 @@
 </div>
 <div id="profielen">
 	<a href="inschrijven"><h3>Schrijf je nu in en ontmoet onder andere deze mensen:</h3></a>
-	<div class="profiel samen">
+	<div class="profiel">
 		<img class="part" src="/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">
 		<div class="part">
 			<p>NICKNAME GESLACHT 99</p>
@@ -18,7 +18,7 @@
 			<p>Merkvoorkeuren: Hier komt dus een kort lijstje met wat merken omdat dat moet</p>
 		</div>
 	</div>
-	<div class="profiel samen">
+	<div class="profiel">
 		<img class="part" src="/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">
 		<div class="part">
 			<p>NICKNAME GESLACHT 99</p>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	<br>
-	<div class="profiel samen">
+	<div class="profiel">
 		<img class="part" src="/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">
 		<div class="part">
 			<p>NICKNAME GESLACHT 99</p>
@@ -37,7 +37,7 @@
 			<p>Merkvoorkeuren: Hier komt dus een kort lijstje met wat merken omdat dat moet</p>
 		</div>
 	</div>
-	<div class="profiel samen">
+	<div class="profiel">
 		<img class="part" src="/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">
 		<div class="part">
 			<p>NICKNAME GESLACHT 99</p>

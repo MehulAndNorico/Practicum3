@@ -13,14 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<a href="start"><img src="/~4301358/wt3/public/logo.png"/></a>
 			</div>
 			<?php
-				if (true)
-				{
-					echo $loginwidget;
-				}
-				else
-				{
-					echo $loginwidget2;
-				}
+				echo $loginwidget;
 			?>
 		</div>
-		<div id="content">
+		<div id='achter'>
+			<div id="content">
