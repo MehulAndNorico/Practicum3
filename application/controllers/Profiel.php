@@ -19,7 +19,7 @@ class Profiel extends CI_Controller {
 		$this->load->model('Profiel_model');
 		$data['gegevens'] = $this->Profiel_model->getInfo($nickname);
 
-		$data['loginwidget'] = $this->load->view('loginwidget', $data, true);
+		$data['nav'] = $this->load->view('nav', $data, true);
 		$this->load->view('head', $data);
 		$this->load->view('profiel');
 		$this->load->view('foot');

@@ -19,7 +19,7 @@ class Set extends CI_Controller {
 		$this->dbforge->create_table('gebruikers');
 
 		$data = array();
-		$data['loginwidget'] = $this->load->view('loginwidget', $data, true);
+		$data['nav'] = $this->load->view('nav', $data, true);
 		$this->load->view('head', $data);
 		$this->load->view('set');
 		$this->load->view('foot');
