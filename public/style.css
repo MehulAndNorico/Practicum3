@@ -56,7 +56,7 @@ body {
 }
 
 .nav h4 {
-	display:inline-block; 
+	display:inline-block;
 }
 
 #achter {
@@ -70,6 +70,17 @@ body {
 	width: calc(100% - 1em);
 	background: rgba(34,34,34,0.75);
 	padding: 0.5em;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+}
+
+#content div {
 }
 
 a {

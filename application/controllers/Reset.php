@@ -71,7 +71,7 @@ class Reset extends CI_Controller {
 			'geboortedatum' => '07-04-1974',
 			'leeftijdmin' => 30,
 			'leeftijdmax' => 50,
-			'beschrijving' => 'Hoi, ik ben Pietje Precies. Pietje ben ik niet een beetje en ook niet bijna helemaal, want Pietje ben ik precies. Ik zoek iemand die precies bij mij past, al is dat misschien wel waarom ik nog op bezoek ben. Als het goed is kan ik nu gewoon maar wat zeggen omdat niemand dit meer leest.',
+			'beschrijving' => 'Hoi, ik ben Pietje Precies. Pietje ben ik niet een beetje en ook niet bijna helemaal, want Pietje ben ik precies. Ik zoek iemand die precies bij mij past, al is dat misschien wel waarom ik nog op zoek ben. Als het goed is kan ik nu gewoon maar wat zeggen omdat niemand dit meer leest.',
 			'persoonlijkheidstype' => '100I100S100T100P',
 			'persoonlijkheidsvoorkeur' => '100E100N100F100J',
 		);

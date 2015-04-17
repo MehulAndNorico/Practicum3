@@ -5,6 +5,9 @@ class Registreren extends CI_Controller {
 	public function index()
 	{
 		$data = array();
+		$this->load->database();
+		$this->load->model('Profiel_model');
+		$data['gegevens'] = $this->Profiel_model->getNew();
 		$data['nav'] = $this->load->view('nav', $data, true);
 		$this->load->view('head', $data);
 		$this->load->view('registreren');

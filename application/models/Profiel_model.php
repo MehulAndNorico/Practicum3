@@ -27,6 +27,21 @@ class Profiel_model extends CI_Model {
 		$sql = "SELECT * FROM gebruikers WHERE nickname = ?";
 		$query = $this->db->query($sql, array($nickname));
 		$data = $query->row();
+		
+		$sql2 = "SELECT * FROM merkvoorkeuren WHERE nickname = ?";
+		$query2 = $this->db->query($sql2, array($nickname));
+		$data2 = $query2->array();
+		$merkvookeuren = '';
+		$komma = false;
+		foreach ($data2 as $row)
+		{	
+			if (komma)
+			{
+				$merkvookeuren = $merkvookeuren . ', ';
+			}
+			$merkvookeuren = $merkvookeuren . $row;
+		}
+
 		$result = array(
 			array('nickname', $data->nickname),
 			array('naam', $data->naam),
@@ -37,8 +52,40 @@ class Profiel_model extends CI_Model {
 			array('leeftijdmax', $data->leeftijdmax),
 			array('beschrijving', $data->beschrijving),
 			array('persoonlijkheidstype', $data->persoonlijkheidstype),
-			array('persoonlijkheidsvoorkeur', $data->persoonlijkheidsvoorkeur)
+			array('persoonlijkheidsvoorkeur', $data->persoonlijkheidsvoorkeur),
+			array('merkvoorkeuren', $merkvoorkeuren) 
 		);
 		return $result;
 	}
+
+	public function setInfo($info)
+	{
+
+
+	}
+
+	public function getNew()
+	{
+		$result = array(
+			array('nickname', ''),
+			array('naam', ''),
+			array('geslacht', ''),
+			array('geslachtsvoorkeur', ''),
+			array('geboortedatum', ''),
+			array('leeftijdmin', ''),
+			array('leeftijdmax', ''),
+			array('beschrijving', ''),
+			array('persoonlijkheidstype', ''),
+			array('persoonlijkheidsvoorkeur', ''),
+			array('merkvoorkeuren', '')
+		);
+		return $result;
+	}
+
+	public function setNew($info)
+	{
+
+	}
+
+	
 }
