@@ -8,13 +8,15 @@ class Start extends CI_Controller {
 		$this->load->helper('url');
 		//$this->load->library('session');
 		//$data['nickname'] = $this->session->nickname;
-		//$data['nickname'] = $this->input->cookie('nickname');
-		/*if (!isset($data['nickname']))
+
+		$data['nickname'] = $this->input->cookie('nickname');
+		if (!isset($data['nickname']))
 		{
 			$data['nickname'] = '';
-		}*/
-		$data['nickname'] = '';
+			$this->input->set_cookie('nickname', '', 864000);
+		}
 		$data['nav'] = $this->load->view('nav', $data, true);
+
 		$this->load->view('head', $data);
 		$this->load->view('start');
 		$this->load->view('foot', $data);

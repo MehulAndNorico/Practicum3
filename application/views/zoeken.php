@@ -1,59 +1,20 @@
-<?php
-/*
-	$geslacht = "<input id='geslacht' type='text' name='geslacht'>";
-	echo
-	/*"<form>
-		<table id='tabel'>
-			<tr>
-				<td>Geslacht</td>
-				<td>$geslacht</td>
-			</tr>
-			<tr>
-				<td>Leeftijdmin</td>
-				<td>$leeftijdmin</td>
-			</tr>
-			<tr>
-				<td>Leeftijdmax</td>
-				<td>$leeftijdmax</td>
-			</tr>
-			<tr>
-				<td>Persoonlijkheidsvoorkeur</td>
-				<td>$persoonlijkheidsvoorkeur</td>
-			</tr>
-			<tr>
-				<td>Merkvoorkeuren</td>
-				<td>$merkvoorkeuren</td>
-			</tr>
-		</table>
-		<div id=profielen>
-		</div>
-		<!--<input type='submit' value='Zoeken OUD'>-->
-		<button onClick='getProfielen()'>Zoeken</button>
-	</form>";*/
-	/*"<table id='tabel'>
-		<tr>
-			<td>Geslacht</td>
-			<td>$geslacht</td>
-		</tr>
-	</table>
-	<div id=profielen>
-	</div>
-	<!--<input type='submit' value='Zoeken OUD'>-->
-	<button onClick='getProfielen()'>Zoeken</button>";*/
-?>
-
 <table id='tabel'>
 	<tr>
 		<td>Geslacht</td>
-		<td><input id='geslacht' type='text' name='geslacht'></td>
+		<td>
+			<select id='geslacht' name='geslacht'>
+			<option value='Man'>Man</option>
+			<option value='Vrouw'>Vrouw</option>
+			</select>
+		</td>
 	</tr>
 	<tr>
-		<td>Leeftijdmin</td>
-		<td><input id='leeftijdmin' type='text' name='leeftijdmin'></td>
+		<td>Leeftijd</td>
+		<td><input id='leeftijdmin' type='number' name='leeftijdmin' min='18' max='100'></td>
 	</tr>
 	<tr>
 		<td>Leeftijdmax</td>
-		<td><input id='leeftijdmax' type='text' name='leeftijdmax'></td>
+		<td><input id='leeftijdmax' type='number' name='leeftijdmax'min='18' max='100'></td>
 	</tr>
 	<tr>
 		<td>Persoonlijkheidsvoorkeur</td>

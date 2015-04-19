@@ -137,4 +137,24 @@ class Profiel_model extends CI_Model {
 			return '';
 		}
 	}
+
+	public function profielen($geslacht, $leeftijdmin, $leeftijdmax, $persoonlijkheidsvoorkeur, $merkvoorkeuren)
+	{
+		$this->load->database();
+		$sql = "SELECT nickname FROM gebruikers WHERE geslacht = ?";
+		$query = $this->db->query($sql, array($geslacht));
+
+		$data = array();
+		for ($i = 0; $i < 6; $i++)
+		{
+			if ($query->num_rows() > $i)
+			{
+				$data[$i] = $query->row($i)->nickname;
+				//echo $data[$i];
+			}	
+		}
+
+		$this->load->model('Profiel_model');
+		return $this->Profiel_model->get6($data);
+	}
 }

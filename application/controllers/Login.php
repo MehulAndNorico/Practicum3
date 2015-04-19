@@ -45,11 +45,12 @@ class Login extends CI_Controller {
 		$this->load->model('Profiel_model');
 		$nickname = $this->Profiel_model->validate($input['email'], $hash);
 		//$this->session->nickname = $nickname;
-		$this->load->helper('cookie');
+		//$this->load->helper('cookie');
 		//$this->cookie->set_cookie('nickname', $nickname);
 		//set_cookie('nickname', $nickname);
-		$nickname = 'yay';
+		//$nickname = 'yay';
 		//setcookie('nickname', $nickname, 'students.science.uu.nl');
+		$this->input->set_cookie('nickname', $nickname, 864000);
 
 		if ($nickname != '')
 		{
