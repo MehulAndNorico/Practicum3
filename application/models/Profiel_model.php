@@ -28,34 +28,66 @@ class Profiel_model extends CI_Model {
 		$query = $this->db->query($sql, array($nickname));
 		$data = $query->row();
 		
-		$sql2 = "SELECT * FROM merkvoorkeuren WHERE nickname = ?";
+		/*$sql2 = "SELECT * FROM merkvoorkeuren WHERE nickname = ?";
 		$query2 = $this->db->query($sql2, array($nickname));
 		$data2 = $query2->array();
-		$merkvookeuren = '';
+		$merkvookeuren = '';*/
+		$merkvoorkeuren = 'ER WERKT IETS :D';
 		$komma = false;
-		foreach ($data2 as $row)
+		/*foreach ($data2 as $row)
 		{	
 			if (komma)
 			{
 				$merkvookeuren = $merkvookeuren . ', ';
 			}
 			$merkvookeuren = $merkvookeuren . $row;
-		}
+		}*/
 
 		$result = array(
-			array('nickname', $data->nickname),
-			array('naam', $data->naam),
-			array('geslacht', $data->geslacht),
-			array('geslachtsvoorkeur', $data->geslachtsvoorkeur),
-			array('geboortedatum', $data->geboortedatum),
-			array('leeftijdmin', $data->leeftijdmin),
-			array('leeftijdmax', $data->leeftijdmax),
-			array('beschrijving', $data->beschrijving),
-			array('persoonlijkheidstype', $data->persoonlijkheidstype),
-			array('persoonlijkheidsvoorkeur', $data->persoonlijkheidsvoorkeur),
-			array('merkvoorkeuren', $merkvoorkeuren) 
+			array('Nickname', $data->nickname),
+			array('Naam', $data->naam),
+			array('Geslacht', $data->geslacht),
+			array('Geslachtsvoorkeur', $data->geslachtsvoorkeur),
+			array('Geboortedatum', $data->geboortedatum),
+			array('Leeftijdmin', $data->leeftijdmin),
+			array('Leeftijdmax', $data->leeftijdmax),
+			array('Beschrijving', $data->beschrijving),
+			array('Persoonlijkheidstype', $data->persoonlijkheidstype),
+			array('Persoonlijkheidsvoorkeur', $data->persoonlijkheidsvoorkeur),
+			array('Merkvoorkeuren', $merkvoorkeuren) 
 		);
 		return $result;
+	}
+
+	public function get6($array = array('geen'))
+	{
+		if ($array == array('geen'))
+		{
+			$nicknames = array('PietjeP', 'Henkie', 'Ingridje', 'PietjeP2', 'Henkie2', 'Ingridje2');
+		}
+		else
+		{
+			$nicknames = $array;
+		}
+		/*if (isset($array))
+		{
+			$nicknames = array('PietjeP');
+		}
+		else
+		{
+			$nicknames = array('PietjeP', 'Henkie', 'Ingridje', 'PietjeP2', 'Henkie2', 'Ingridje2');
+
+		}*/
+		foreach($nicknames as $nn)
+		{
+			echo '<div>';
+			$info = $this->Profiel_model->getInfo($nn);
+			foreach($info as $item)
+			{
+				echo '<p>'. $item[0] . ': ' . $item[1] . '</p>';
+			}
+			echo '</div><br>';
+		}
 	}
 
 	public function setInfo($info)

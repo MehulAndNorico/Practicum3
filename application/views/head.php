@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<meta charset="utf-8">
 		<title>DataDate: vind de leven van je liefde</title>
 		<link rel="stylesheet" type="text/css" href="/~4301358/wt3/public/style.css"/>
+		<link rel="shortcut icon" type="image/png" href="/~4301358/wt3/public/logo.png">
 	</head>
 	<body>
 		<div id="header">

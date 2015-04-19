@@ -22,7 +22,15 @@ class Start extends CI_Controller {
 
 	public function profielen()
 	{
-		echo "<p>Yay</p>";
+		echo '<a href="inschrijven"><h3>Schrijf je nu in en ontmoet onder andere deze mensen:</h3></a>';
+
+		$this->load->model('Profiel_model');
+		echo $this->Profiel_model->get6();
+	}
+
+	public function asdf()
+	{
+		echo 'yay';
 	}
 }
 ?>

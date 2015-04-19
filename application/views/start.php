@@ -8,9 +8,8 @@
 	</div>
 </div>
 <div id="profielen">
-	<a href="inschrijven"><h3>Schrijf je nu in en ontmoet onder andere deze mensen:</h3></a>
-	<div class="profiel" id="profiel1">
-		<img class="part" src="/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">
+		<div class="profiel">
+		<img class="part" src="https://www.students.science.uu.nl/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">
 		<div class="part">
 			<p>NICKNAME GESLACHT 99</p>
 			<p>Persoonlijkheidstype: Je moeder</p>
@@ -18,29 +17,15 @@
 			<p>Merkvoorkeuren: Hier komt dus een kort lijstje met wat merken omdat dat moet</p>
 		</div>
 	</div>
-	<div class="profiel" id="profiel2"></div>
-	<br>
-	<div class="profiel" id="profiel3"></div>
-	<div class="profiel" id="profiel4"></div>
-	<br>
-	<div class="profiel" id="profiel5"></div>
-	<br>
-	<div class="profiel" id="profiel6"></div>
 	<script>
-		krijgProfielen() {
-	        var xmlhttp = new XMLHttpRequest();
-	        xmlhttp.onreadystatechange = function() {
-	            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-	                document.getElementById("profiel1").innerHTML = xmlhttp.responseText;
-	                document.getElementById("profiel2").innerHTML = xmlhttp.responseText;
-	                document.getElementById("profiel3").innerHTML = xmlhttp.responseText;
-	                document.getElementById("profiel4").innerHTML = xmlhttp.responseText;
-	                document.getElementById("profiel5").innerHTML = xmlhttp.responseText;
-	                document.getElementById("profiel6").innerHTML = xmlhttp.responseText;
-	            }
-	        }
-	        xmlhttp.open("GET", "https://www.students.science.uu.nl/~4301358/wt3/start/profielen", true);
-	        xmlhttp.send();
-		}
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            {
+                document.getElementById("profielen").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET", "https://www.students.science.uu.nl/~4301358/wt3/start/profielen", true);
+        xmlhttp.send();
 	</script>
 </div>

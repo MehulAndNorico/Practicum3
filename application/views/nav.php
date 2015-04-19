@@ -5,34 +5,34 @@
 		if (false)
 		{
 			echo(
-				"<a href='matches'>
+				"<a href='https://www.students.science.uu.nl/~4301358/wt3/matches'>
 					<h2>Matches</h2>
 				 </a>
-				  <a href='login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
 					<h2>Geliked</h2>
 				 </a>
-				  <a href='login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
 					<h2>Mijn likes</h2>
 				 </a>
-				  <a href='login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
 					<h2>Wederzijdse likes</h2>
 				 </a>
-				  <a href='login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
 					<h2>Mijn profiel ()</h2>
 				 </a>
-				 <a href='uitloggen'>
+				 <a href='https://www.students.science.uu.nl/~4301358/wt3/uitloggen'>
 					<h2>Uitloggen</h2>
 				 </a>"
 				);
 		} else {
 			echo(
-				'<a href="zoeken">
+				'<a href="https://www.students.science.uu.nl/~4301358/wt3/zoeken">
 					<h2>Zoeken</h2>
 				 </a>
-				 <a href="login">
+				 <a href="https://www.students.science.uu.nl/~4301358/wt3/login">
 					<h2>Inloggen</h2>
 				 </a>
-				 <a href="registreren">
+				 <a href="https://www.students.science.uu.nl/~4301358/wt3/registreren">
 				 	<h2>Registreren </h2>
 				 </a>'
 			);
