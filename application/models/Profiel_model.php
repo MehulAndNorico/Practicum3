@@ -91,15 +91,18 @@ class Profiel_model extends CI_Model {
 	{
 		$this->load->database();
 		$sql = "SELECT nickname FROM gebruikers WHERE emailadres = ? AND wachtwoord = ?";
-		if ($query = $this->db->query($sql, array($email, $ww)))
+		$query = $this->db->query($sql, array($email, $ww));
+		//$query = $this->db->query($sql, array('pietje@dd.com', 'e8636ea013e682faf61f56ce1cb1ab5c'));
+		//$query = $this->db->query("SELECT nickname FROM gebruikers WHERE emailadres = 'pietje@dd.com' AND wachtwoord = 'e8636ea013e682faf61f56ce1cb1ab5c'");
+		
+		if ($query->num_rows() > 0)
 		{
-			$validated = true;
-			$nickname = $query->row();
-			$this->session->nickname = $nickname;
+			//return $query->row;
+			return 'succes';
 		}
 		else
 		{
-			$validated = false;
+			return '';
 		}
 	}
 }

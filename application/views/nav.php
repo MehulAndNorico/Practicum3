@@ -32,8 +32,8 @@
 					<h2>Inloggen</h2>
 				 </a>
 				 <a href="registreren">
-				 	<h2>Registreren</h2>
-				 </a>'
+				 	<h2>Registreren </h2>
+				 </a>' . "<h2>$nickname</h2>"
 			);
 		}
 	?>

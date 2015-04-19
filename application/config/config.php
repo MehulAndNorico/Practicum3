@@ -270,6 +270,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 | application/views/errors/ directory.  Use a full server path with trailing slash.
 |
 */
+//$config['error_views_path'] = 'home/students/4301358/www/wt3/application/views/errors';
 $config['error_views_path'] = '';
 
 /*
@@ -358,7 +359,8 @@ $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
 //$config['sess_save_path'] = 'students.science.uu.nl/~4301358/wt3/application/db';
 //$config['sess_save_path'] = '/home/students:/tmp';
-$config['sess_save_path'] = 'home/students/4301358/www/wt3/application/sessions';
+//$config['sess_save_path'] = 'home/students/4301358/www/wt3/application/sessions';
+$config['sess_save_path'] = '';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;

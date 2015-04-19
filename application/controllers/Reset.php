@@ -14,7 +14,7 @@ class Reset extends CI_Controller {
 			'naam' => 'Pietje Precies',
 			'emailadres' => 'pietje@dd.com',
 			'wachtwoord' => 'e8636ea013e682faf61f56ce1cb1ab5c',
-			//ikbenpietjep
+			//geheim
 			'geslacht' => 'Man',
 			'geslachtsvoorkeur' => 'Vrouw',
 			'geboortedatum' => '07-04-1974',

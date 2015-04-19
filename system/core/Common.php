@@ -153,6 +153,7 @@ if ( ! function_exists('load_class'))
 		// Look for the class first in the local application/libraries folder
 		// then in the native system/libraries folder
 		foreach (array(APPPATH, BASEPATH) as $path)
+		//foreach (array('/home/students/4301358/www/wt3/application/', '/home/students/4301358/www/wt3/system/') as $path)
 		{
 			if (file_exists($path.$directory.'/'.$class.'.php'))
 			{

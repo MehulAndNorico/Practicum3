@@ -6,6 +6,7 @@ class Login extends CI_Controller {
 	{
 		$data = array();
 		
+		$this->load->library('session');
 		$data['nickname'] = $this->session->nickname;
 		$data['nav'] = $this->load->view('nav', $data, true);
 
@@ -33,21 +34,20 @@ class Login extends CI_Controller {
         	'ww' => $this->input->post('wachtwoord')
     	);
 
-		
-		$data['nav'] = $this->load->view('nav', $data, true);
-		$this->load->view('head', $data);
+		//$hash = password_hash($input['ww'], PASSWORD_BCRYPT);
+		$hash = md5($input['ww']);
 
-		$hash = password_hash($input['ww'], PASSWORD_BCRYPT);
 		$this->load->model('Profiel_model');
-		if ($this->Profiel_model->validate($input['email'], $hash))
+		$nickname = $this->Profiel_model->validate($input['email'], $hash);
+		$this->session->nickname = $nickname;
+		if ($nickname != '')
 		{
-			$this->load->view('start');
+			redirect('https://www.students.science.uu.nl/~4301358/wt3/start');
 		}
 		else
 		{
-			$this->load->view('login');
-		}
-		$this->load->view('foot');	
+			redirect('https://www.students.science.uu.nl/~4301358/wt3/login');
+		}	
 	}
 }
 ?>
