@@ -43,6 +43,112 @@ INSERT INTO profielen VALUES (
 	''
 );
 
+INSERT INTO profielen VALUES (
+	'Sjaakie',
+	'Sjaak Sjaaksema',
+	'Sjaak@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'07-08-1975',
+	20,
+	40,
+	'Sjaak zijn is het beste wat mij ooit is overkomen, ik ben namelijk nooit de Sjaak',
+	'',
+	''
+);
+
+INSERT INTO profielen VALUES (
+	'Sjonny',
+	'John de Beer',
+	'Sjonny@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'08-03-1975',
+	20,
+	40,
+	'Ik hoop de Clara voor mijn Sjonny te ontmoeten',
+	'',
+	''
+);
+
+INSERT INTO profielen VALUES (
+	'Claratje',
+	'Clara de Boer',
+	'Clara@dd.com',
+	'807e24792b035c8f35f9b82d738f410e',
+	'Vrouw',
+	'Man',
+	'13-12-1970',
+	30,
+	50,
+	'Ik ben Clara, en ik ben op zoek naar jouw',
+	'',
+	''
+);
+
+INSERT INTO profielen VALUES (
+	'Christineee',
+	'Christine de Heer',
+	'Christine@dd.com',
+	'807e24792b035c8f35f9b82d738f410e',
+	'Vrouw',
+	'Man',
+	'13-12-1970',
+	20,
+	40,
+	'Ben jij op zoek naar Christine? Dan zit je hier op de goede plek!',
+	'',
+	''
+);
+
+INSERT INTO profielen VALUES (
+	'LauraV',
+	'Laura Vergiet',
+	'Laura@dd.com',
+	'807e24792b035c8f35f9b82d738f410e',
+	'Vrouw',
+	'Man',
+	'24-11-1980',
+	15,
+	25,
+	'Zoek niet verder, Laura is de persoon voor jou',
+	'',
+	''
+);
+
+INSERT INTO profielen VALUES (
+	'Bertie',
+	'Bert Bruin',
+	'Bert@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'08-03-1975',
+	15,
+	25,
+	'Hallo ijn naam is Bert en meer wil iki niet over mijzelf vertellen',
+	'',
+	''
+);
+
+INSERT INTO profielen VALUES (
+	'Jan',
+	'Jan Alleman',
+	'Jan@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'19-04-1979',
+	27,
+	32,
+	'Ik val nooit op en dat wil ik graag zo houden',
+	'',
+	''
+);
+
+
 INSERT INTO merken VALUES ('Aquafresh');
 INSERT INTO merken VALUES ('Colgate');
 INSERT INTO merken VALUES ('Elmex');
