@@ -9,3 +9,5 @@ http://www.splitshire.com/couple-kissing/ Couple Kissing van SplitShire
 
 Streepjes: http://www.stripegenerator.com/ size 2 spacing 10
 Lettertype van logo: http://www.1001fonts.com/love-letters-font.html
+
+4 uur open_basedir restriction

@@ -5,9 +5,14 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$data = array();
-		
-		$this->load->library('session');
-		$data['nickname'] = $this->session->nickname;
+		$this->load->helper('url');
+		//$this->load->library('session');
+		//$data['nickname'] = $this->session->nickname;
+		$data['nickname'] = $this->input->cookie('nickname');
+		if (!isset($data['nickname']))
+		{
+			$data['nickname'] = '';
+		}
 		$data['nav'] = $this->load->view('nav', $data, true);
 
 		$this->load->helper('form');
@@ -39,7 +44,13 @@ class Login extends CI_Controller {
 
 		$this->load->model('Profiel_model');
 		$nickname = $this->Profiel_model->validate($input['email'], $hash);
-		$this->session->nickname = $nickname;
+		//$this->session->nickname = $nickname;
+		$this->load->helper('cookie');
+		//$this->cookie->set_cookie('nickname', $nickname);
+		//set_cookie('nickname', $nickname);
+		$nickname = 'yay';
+		//setcookie('nickname', $nickname, 'students.science.uu.nl');
+
 		if ($nickname != '')
 		{
 			redirect('https://www.students.science.uu.nl/~4301358/wt3/start');
