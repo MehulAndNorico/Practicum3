@@ -1,27 +1,27 @@
 <div class="nav">
 	<?php
 		//if (ingelogd)
-		if (true)
+		if ($nickname != '')
 		{
 			echo(
-				'<a href="matches">
+				"<a href='matches'>
 					<h2>Matches</h2>
 				 </a>
-				  <a href="login">
+				  <a href='login'>
 					<h2>Geliked</h2>
 				 </a>
-				  <a href="login">
+				  <a href='login'>
 					<h2>Mijn likes</h2>
 				 </a>
-				  <a href="login">
+				  <a href='login'>
 					<h2>Wederzijdse likes</h2>
 				 </a>
-				  <a href="login">
-					<h2>Mijn profiel ($naamStraks)</h2>
+				  <a href='login'>
+					<h2>Mijn profiel ($nickname)</h2>
 				 </a>
-				 <a href="uitloggen">
+				 <a href='uitloggen'>
 					<h2>Uitloggen</h2>
-				 </a>'
+				 </a>"
 				);
 		} else {
 			echo(

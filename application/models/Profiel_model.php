@@ -87,5 +87,19 @@ class Profiel_model extends CI_Model {
 
 	}
 
-	
+	public function validate($email, $ww)
+	{
+		$this->load->database();
+		$sql = "SELECT nickname FROM gebruikers WHERE emailadres = ? AND wachtwoord = ?";
+		if ($query = $this->db->query($sql, array($email, $ww)))
+		{
+			$validated = true;
+			$nickname = $query->row();
+			$this->session->nickname = $nickname;
+		}
+		else
+		{
+			$validated = false;
+		}
+	}
 }

@@ -9,62 +9,11 @@ class Reset extends CI_Controller {
 		$this->load->dbforge();
 		$this->load->database();
 
-		$this->dbforge->drop_table('gebruikers');
-		$fields = array(
-	        'nickname' => array(
-	                'type' => 'VARCHAR',
-	 				'constraint' => 20
-	        ),
-	        'naam' => array(
-	        		'type' => 'VARCHAR',
-	        		'constraint' => 40
-	        ),
-	        'emailadres' => array(
-	                'type' => 'VARCHAR',
-	 				'constraint' => 30
-	        ),
-	        'wachtwoord' => array(
-	        		'type' => 'VARCHAR',
-	        		'constraint' => 32
-	        ),
-	        'geslacht' => array(
-	                'type' => 'VARCHAR',
-	 				'constraint' => 15
-	        ),
-	        'geslachtsvoorkeur' => array(
-	        		'type' => 'VARCHAR',
-	        		'constraint' => 100
-	        ),
-	        'geboortedatum' => array(
-	                'type' => 'DATE'
-	        ),
-	        'leeftijdmin' => array(
-	        		'type' => 'INTEGER'
-	        ),
-	        'leeftijdmax' => array(
-	                'type' => 'INTEGER'
-	        ),
-	        'beschrijving' => array(
-	        		'type' => 'VARCHAR',
-	        		'constraint' => 500
-	        ),
-	        'persoonlijkheidstype' => array(
-	                'type' => 'VARCHAR',
-	 				'constraint' => 12
-	        ),
-	        'persoonlijkheidsvoorkeur' => array(
-	        		'type' => 'VARCHAR',
-	        		'constraint' => 12
-	        )
-		);
-		$this->dbforge->add_field($fields);
-		$this->dbforge->create_table('gebruikers');
-
 		$nieuw = array(
 			'nickname' => 'PietjeP',
 			'naam' => 'Pietje Precies',
 			'emailadres' => 'pietje@dd.com',
-			'wachtwoord' => '24c22c48b48ea87bd4ab4f3aac2ace21',
+			'wachtwoord' => 'e8636ea013e682faf61f56ce1cb1ab5c',
 			//ikbenpietjep
 			'geslacht' => 'Man',
 			'geslachtsvoorkeur' => 'Vrouw',
@@ -79,7 +28,7 @@ class Reset extends CI_Controller {
 		$nieuw = array(
 			'nickname' => 'Henkie',
 			'naam' => 'Henk Haring',
-			'emailadres' => 'henkieh@dd.com',
+			'emailadres' => 'henkh@dd.com',
 			'wachtwoord' => 'd995c053a687e2ab826c8e4bfed908ae',
 			//iklustgeenharing
 			'geslacht' => 'Man',
@@ -95,7 +44,7 @@ class Reset extends CI_Controller {
 		$nieuw = array(
 			'nickname' => 'Ingridje',
 			'naam' => 'Ingrid de Eerste',
-			'emailadres' => 'ingrid1@dd.com',
+			'emailadres' => 'ingrid@dd.com',
 			'wachtwoord' => '807e24792b035c8f35f9b82d738f410e',
 			//ikbenaltijddeeerstebehalveopdezewebsite
 			'geslacht' => 'Vrouw',
