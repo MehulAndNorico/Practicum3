@@ -7,8 +7,7 @@
     <input type='submit' value='$wat'/>
     </form>";
   }
-  echo $data['wie'];
-  echo "<table id='tabel>";
+  echo "<table id='tabel'>";
   foreach ($gegevens as $paar) {
     echo '<tr>';
     foreach ($paar as $string) {

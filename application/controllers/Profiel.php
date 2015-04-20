@@ -36,6 +36,31 @@ class Profiel extends CI_Controller {
 		}
 		else
 		{
+			
+			$input = array(
+	        	'wat' => $this->input->post('wat'),
+	        	'wie' => $this->input->post('wie')
+    		);
+
+			if (! is_null($input['wat']))
+			{
+				if ($input['wat'] == 'Liken')
+				{
+					$this->load->database();
+					$sql = "INSERT INTO likes VALUES (?, ?);";
+					$query = $this->db->query($sql, array($data['nickname'], $input['wie']));
+				}
+				else if ($input['wat'] == 'Ontliken')
+				{
+					$this->load->database();
+					$sql = "DELETE FROM likes WHERE van = ? AND naar = ?;";
+					$query = $this->db->query($sql, array($data['nickname'], $input['wie']));
+					
+					$this->load->helper('url');
+				redirect('https://www.students.science.uu.nl/~4301358/wt3/profiel/bekijk/nickname/'. $input['wie']);
+				}
+			}
+
 			$data = array();
 
 			$data['wie'] = $this->uri->uri_to_assoc()['nickname'];
@@ -49,7 +74,7 @@ class Profiel extends CI_Controller {
 			$sql = "SELECT * FROM likes WHERE van = ? AND naar = ?";
 			$query = $this->db->query($sql, array($data['nickname'],$data['wie']));
 
-			if ($query->num_rows > 0)
+			if ($query->num_rows() > 0)
 			{
 				$data['wat'] = 'Ontliken';
 			}

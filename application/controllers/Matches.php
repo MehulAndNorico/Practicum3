@@ -13,6 +13,8 @@ class Matches extends CI_Controller {
 		}
 		$data['nav'] = $this->load->view('nav', $data, true);
 		
+		$this->load->view('head', $data);
+
 		$this->load->database();
 		$sql = "SELECT geslachtsvoorkeur FROM gebruikers WHERE nickname = ?";
 		$query = $this->db->query($sql, array($data['nickname']));
@@ -34,7 +36,6 @@ class Matches extends CI_Controller {
 			$data['content'] = '<p>Geen matches gevonden</p>';
 		}
 
-		$this->load->view('head', $data);
 		$this->load->view('content', $data);
 		$this->load->view('foot', $data);
 	}	

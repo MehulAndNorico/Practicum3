@@ -199,3 +199,108 @@ INSERT INTO merken VALUES ('Super de Boer');
 INSERT INTO merken VALUES ('Apple');
 INSERT INTO merken VALUES ('Google');
 INSERT INTO merken VALUES ('Microsoft');
+
+INSERT INTO likes VALUES (
+	'PietjeP',
+	'Henkie'
+	);
+
+INSERT INTO likes VALUES (
+	'Henkie',
+	'Sjaakie'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Sjaakie',
+	'Sjonny'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Sjonny',
+	'Bertie'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Bertie',
+	'Jan'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Jan',
+	'Ingridje'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Ingridje',
+	'Claratje'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Claratje',
+	'Christineee'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Christineee',
+	'LauraV'
+	);
+
+
+INSERT INTO likes VALUES (
+	'LauraV',
+	'PietjeP'
+	);
+
+
+
+
+INSERT INTO likes VALUES (
+	'Henkie',
+	'PietjeP'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Sjaakie',
+	'Henkie'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Sjonny',
+	'Sjaakie'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Bertie',
+	'Sjonny'
+	);
+
+
+INSERT INTO likes VALUES (
+	'Jan',
+	'Bertie'
+	);
+
+
+
+
+INSERT INTO likes VALUES (
+	'Christineee',
+	'PietjeP'
+	);
+
+
+INSERT INTO likes VALUES (
+	'PietjeP',
+	'Claratje'
+	);
+		

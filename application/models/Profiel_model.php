@@ -30,10 +30,9 @@ class Profiel_model extends CI_Model {
 		
 		/*$sql2 = "SELECT * FROM merkvoorkeuren WHERE nickname = ?";
 		$query2 = $this->db->query($sql2, array($nickname));
-		$data2 = $query2->array();
-		$merkvookeuren = '';*/
-		$merkvoorkeuren = 'ER WERKT IETS :D';
-		$komma = false;
+		$data2 = $query2->array();*/
+		$merkvoorkeuren = '';
+		//$komma = false;
 		/*foreach ($data2 as $row)
 		{	
 			if (komma)
@@ -103,9 +102,19 @@ class Profiel_model extends CI_Model {
 			$gevonden = true;
 			echo '<div>';
 			$info = $this->Profiel_model->getInfo($nn, true);
+			$eerste = true;
 			foreach($info as $item)
 			{
-				echo '<p>'. $item[0] . ': ' . $item[1] . '</p>';
+				if ($eerste)
+				{
+					echo '<a href="https://www.students.science.uu.nl/~4301358/wt3/profiel/bekijk/nickname/' . $item[1] . '""><p>'. $item[0] . ': ' . $item[1] . '</p></a>';
+					$eerste = false;
+				}
+				else
+				{
+					echo '<p>'. $item[0] . ': ' . $item[1] . '</p>';
+				}
+				
 			}
 			echo '</div><br>';
 		}
@@ -128,6 +137,8 @@ class Profiel_model extends CI_Model {
 		$result = array(
 			array('nickname', ''),
 			array('naam', ''),
+			array('emailadres', ''),
+			array('wachtwoord', ''),
 			array('geslacht', ''),
 			array('geslachtsvoorkeur', ''),
 			array('geboortedatum', ''),

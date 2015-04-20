@@ -2,7 +2,7 @@ Sessies worden bijgehouden door een cookie met de nickname van de gebruiker. Dit
 
 Ook hebben we niet kunnen uitvinden waarom CodeIgniter bij sommige pagina's de volgorde van de views omwisselt of dat wij iets verkeerd doen.
 
-De website is te bekijken via https://www.students.science.uu.nl/~4301358/wt3/start
+De grotendeels werkende website is te bekijken via https://www.students.science.uu.nl/~4301358/wt3/start
 
 De sql statements staan in application/db
 
@@ -15,11 +15,8 @@ De andere accounts hebben hetzelfde wachtwoord.
 
 
 NOG DOEN:
-Kunnen liken
-Link naar profiel
-Kunnen Registreren
-Merkvoorkeuren
 ?Matchingsalgoritme?
+?Merken?
 Readme
 
 Credits
