@@ -8,16 +8,16 @@
 				"<a href='https://www.students.science.uu.nl/~4301358/wt3/matches'>
 					<h2>Matches</h2>
 				 </a>
-				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/likes/geliked'>
 					<h2>Geliked</h2>
 				 </a>
-				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/likes/mijn'>
 					<h2>Mijn likes</h2>
 				 </a>
-				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/likes/wederzijds'>
 					<h2>Wederzijdse likes</h2>
 				 </a>
-				  <a href='https://www.students.science.uu.nl/~4301358/wt3/login'>
+				  <a href='https://www.students.science.uu.nl/~4301358/wt3/profiel'>
 					<h2>Mijn profiel ($nickname)</h2>
 				 </a>
 				 <a href='https://www.students.science.uu.nl/~4301358/wt3/uitloggen'>

@@ -21,7 +21,11 @@ class Login extends CI_Controller {
 		$data['wwveld'] = form_password('wachtwoord');
 		$data['submit'] = form_submit('submit', 'Inloggen');
 		$data['formclose'] = form_close();
-
+		$data['nickname'] = $this->input->cookie('nickname');
+		if (!isset($data['nickname']))
+		{
+			$data['nickname'] = '';
+		}
 		$this->load->view('head', $data);
 		$this->load->view('login');
 		$this->load->view('foot');

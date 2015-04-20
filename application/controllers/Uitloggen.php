@@ -10,6 +10,7 @@ class Uitloggen extends CI_Controller {
 			$data['nickname'] = '';
 		}
 		$this->input->set_cookie('nickname', '', 864000);
+		$this->load->helper('url');
 		redirect('https://www.students.science.uu.nl/~4301358/wt3/start');
 	}
 }

@@ -1,4 +1,4 @@
-INSERT INTO profielen VALUES (
+INSERT INTO gebruikers VALUES (
 	'PietjeP',
 	'Pietje Precies',
 	'pietje@dd.com',
@@ -13,7 +13,7 @@ INSERT INTO profielen VALUES (
 	'100E100N100F100J'
 );
 
-INSERT INTO profielen VALUES (
+INSERT INTO gebruikers VALUES (
 	'Henkie',
 	'Henk Haring',
 	'henkh@dd.com',
@@ -24,11 +24,72 @@ INSERT INTO profielen VALUES (
 	25,
 	35,
 	'hoi ik ben henk haring ik heb net geleerd hoe ik op een scherm kan surfen met mijn muis maar ik snap het nog niet helemaal dus ik hoop dat dit gaat lukken want het lijkt mij leuk om iemand te ontmoeten waar ik dingen mee kan doen',
-	'',
-	''
+	'80E80N80F80J',
+	'80I80S80T80P'
 );
 
-INSERT INTO profielen VALUES (
+INSERT INTO gebruikers VALUES (
+	'Sjaakie',
+	'Sjaak Sjaaksema',
+	'sjaak@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'07-08-1975',
+	20,
+	40,
+	'Sjaak zijn is het beste wat mij ooit is overkomen, ik ben namelijk nooit de Sjaak',
+	'60E60N60F60J',
+	'60I60S60T60P'
+);
+
+INSERT INTO gebruikers VALUES (
+	'Sjonny',
+	'John de Beer',
+	'sjonny@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'08-03-1975',
+	20,
+	40,
+	'Ik hoop de Clara voor mijn Sjonny te ontmoeten',
+	'70E70N70F70J',
+	'70I70S70T70P'
+);
+
+
+INSERT INTO gebruikers VALUES (
+	'Bertie',
+	'Bert Bruin',
+	'bert@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'08-03-1975',
+	15,
+	25,
+	'Hallo ijn naam is Bert en meer wil iki niet over mijzelf vertellen',
+	'70E70N70F70J',
+	'70I70S70T70P'
+);
+
+INSERT INTO gebruikers VALUES (
+	'Jan',
+	'Jan Alleman',
+	'jan@dd.com',
+	'e8636ea013e682faf61f56ce1cb1ab5c',
+	'Man',
+	'Vrouw',
+	'19-04-1979',
+	27,
+	32,
+	'Ik val nooit op en dat wil ik graag zo houden',
+	'70E70N70F70J',
+	'70I70S70T70P'
+);
+
+INSERT INTO gebruikers VALUES (
 	'Ingridje',
 	'Ingrid de Eerste',
 	'ingrid@dd.com',
@@ -39,44 +100,14 @@ INSERT INTO profielen VALUES (
 	25,
 	35,
 	'HALLO.IK.BEN.INGRID.WEET.IEMAND.HOE.IK.IN.NORMALE.LETTERS.KAN.TYPEN.WANT.HIER.WORDT.IK.EEN.BEETJE.GEK.VAN HOPELIJK.WORDT.JIJ.NET.ZO.GEK.OP.MIJ ',
-	'',
-	''
+	'70E70N70F70J',
+	'70I70S70T70P'
 );
 
-INSERT INTO profielen VALUES (
-	'Sjaakie',
-	'Sjaak Sjaaksema',
-	'Sjaak@dd.com',
-	'e8636ea013e682faf61f56ce1cb1ab5c',
-	'Man',
-	'Vrouw',
-	'07-08-1975',
-	20,
-	40,
-	'Sjaak zijn is het beste wat mij ooit is overkomen, ik ben namelijk nooit de Sjaak',
-	'',
-	''
-);
-
-INSERT INTO profielen VALUES (
-	'Sjonny',
-	'John de Beer',
-	'Sjonny@dd.com',
-	'e8636ea013e682faf61f56ce1cb1ab5c',
-	'Man',
-	'Vrouw',
-	'08-03-1975',
-	20,
-	40,
-	'Ik hoop de Clara voor mijn Sjonny te ontmoeten',
-	'',
-	''
-);
-
-INSERT INTO profielen VALUES (
+INSERT INTO gebruikers VALUES (
 	'Claratje',
 	'Clara de Boer',
-	'Clara@dd.com',
+	'clara@dd.com',
 	'807e24792b035c8f35f9b82d738f410e',
 	'Vrouw',
 	'Man',
@@ -84,14 +115,14 @@ INSERT INTO profielen VALUES (
 	30,
 	50,
 	'Ik ben Clara, en ik ben op zoek naar jouw',
-	'',
-	''
+	'100E100N100F100J',
+	'100I100S100T100P'
 );
 
-INSERT INTO profielen VALUES (
+INSERT INTO gebruikers VALUES (
 	'Christineee',
 	'Christine de Heer',
-	'Christine@dd.com',
+	'christine@dd.com',
 	'807e24792b035c8f35f9b82d738f410e',
 	'Vrouw',
 	'Man',
@@ -99,14 +130,14 @@ INSERT INTO profielen VALUES (
 	20,
 	40,
 	'Ben jij op zoek naar Christine? Dan zit je hier op de goede plek!',
-	'',
-	''
+	'100E100N100F100J',
+	'100I100S100T100P'
 );
 
-INSERT INTO profielen VALUES (
+INSERT INTO gebruikers VALUES (
 	'LauraV',
 	'Laura Vergiet',
-	'Laura@dd.com',
+	'laura@dd.com',
 	'807e24792b035c8f35f9b82d738f410e',
 	'Vrouw',
 	'Man',
@@ -114,40 +145,9 @@ INSERT INTO profielen VALUES (
 	15,
 	25,
 	'Zoek niet verder, Laura is de persoon voor jou',
-	'',
-	''
+	'70E70N70F70J',
+	'70I70S70T70P'
 );
-
-INSERT INTO profielen VALUES (
-	'Bertie',
-	'Bert Bruin',
-	'Bert@dd.com',
-	'e8636ea013e682faf61f56ce1cb1ab5c',
-	'Man',
-	'Vrouw',
-	'08-03-1975',
-	15,
-	25,
-	'Hallo ijn naam is Bert en meer wil iki niet over mijzelf vertellen',
-	'',
-	''
-);
-
-INSERT INTO profielen VALUES (
-	'Jan',
-	'Jan Alleman',
-	'Jan@dd.com',
-	'e8636ea013e682faf61f56ce1cb1ab5c',
-	'Man',
-	'Vrouw',
-	'19-04-1979',
-	27,
-	32,
-	'Ik val nooit op en dat wil ik graag zo houden',
-	'',
-	''
-);
-
 
 INSERT INTO merken VALUES ('Aquafresh');
 INSERT INTO merken VALUES ('Colgate');

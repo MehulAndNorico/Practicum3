@@ -2,52 +2,99 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Profiel extends CI_Controller {
-	public function bekijk()
+	public function index()
 	{
 		$data = array();
-		$this->load->database();
-		
-		$nickname = $this->uri->uri_to_assoc()['nickname'];
-		
-		echo $nickname;
-		/*
-		$sql = "SELECT * FROM gebruikers WHERE nickname = ?";
-		$query = $this->db->query($sql, array($nickname));
-		$data['result'] = $query->row();
-		*/
 
-		$this->load->model('Profiel_model');
-		$data['gegevens'] = $this->Profiel_model->getInfo($nickname);
+		$data['nickname'] = $this->input->cookie('nickname');
+		if (!isset($data['nickname']))
+		{
+			$data['nickname'] = '';
+			$data['gegevens'] = '<p>Registreer of log in om dit te bekijken</p>';
+		}
+		else
+		{
+			$this->load->model('Profiel_model');
+			$data['gegevens'] = $this->Profiel_model->getInfo($data['nickname'], false);
+		}
 
+		$data['likeknop'] = false;
 		$data['nav'] = $this->load->view('nav', $data, true);
 		$this->load->view('head', $data);
-		$this->load->view('profielBekijk');
+		$this->load->view('profielBekijk', $data);
 		$this->load->view('foot');
+	}
+
+	public function bekijk()
+	{
+		$data['nickname'] = $this->input->cookie('nickname');
+		if (!isset($data['nickname']))
+		{
+			$data['nickname'] = '';
+			$this->load->helper('url');
+			redirect('https://www.students.science.uu.nl/~4301358/wt3/login');
+		}
+		else
+		{
+			$data = array();
+
+			$data['wie'] = $this->uri->uri_to_assoc()['nickname'];
+
+			$this->load->model('Profiel_model');
+			$data['gegevens'] = $this->Profiel_model->getInfo($data['wie'], false);
+			
+			$data['nickname'] = $this->input->cookie('nickname');
+
+			$this->load->database();
+			$sql = "SELECT * FROM likes WHERE van = ? AND naar = ?";
+			$query = $this->db->query($sql, array($data['nickname'],$data['wie']));
+
+			if ($query->num_rows > 0)
+			{
+				$data['wat'] = 'Ontliken';
+			}
+			else
+			{
+				$data['wat'] = 'Liken';
+			}
+
+			$data['likeknop'] = true;
+			$data['nav'] = $this->load->view('nav', $data, true);
+			$this->load->view('head', $data);
+			$this->load->view('profielBekijk', $data);
+			$this->load->view('foot', $data);
+		}
 	}
 
 	public function bewerk()
 	{
 		$data = array();
-		$this->load->database();
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		$nickname = $this->uri->uri_to_assoc()['nickname'];
-		
-		echo $nickname;
-		/*
-		$sql = "SELECT * FROM gebruikers WHERE nickname = ?";
-		$query = $this->db->query($sql, array($nickname));
-		$data['result'] = $query->row();
-		*/
 
-		$this->load->model('Profiel_model');
-		$data['gegevens'] = $this->Profiel_model->getInfo($nickname);
+		$data['nickname'] = $this->input->cookie('nickname');
+		if (!isset($data['nickname']))
+		{
+			$data['nickname'] = '';
+			$this->load->helper('url');
+			redirect('https://www.students.science.uu.nl/~4301358/wt3/login');
+		}
+		else
+		{
+			$this->load->database();
+			$this->load->helper('form');
+			$this->load->library('form_validation');
 
-		$data['nav'] = $this->load->view('nav', $data, true);
-		$this->load->view('head', $data);
-		$this->load->view('profielBewerk');
-		$this->load->view('foot');
+			$this->load->model('Profiel_model');
+			$data['gegevens'] = $this->Profiel_model->getInfo($nickname, false);
+			$data['nickname'] = $this->input->cookie('nickname');
+			if (!isset($data['nickname']))
+			{
+				$data['nickname'] = '';
+			}
+			$data['nav'] = $this->load->view('nav', $data, true);
+			$this->load->view('head', $data);
+			$this->load->view('profielBewerk', $data);
+			$this->load->view('foot');
+		}	
 	}
 }
 ?>

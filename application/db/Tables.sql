@@ -9,8 +9,8 @@ CREATE TABLE gebruikers (
 	leeftijdmin			INTEGER			NOT NULL,
 	leeftijdmax			INTEGER			NOT NULL,
 	beschrijving		VARCHAR(500)	NOT NULL,
-	persoonlijkheidstype		VARCHAR(12),	NOT NULL,
-	persoonlijkheidsvoorkeur	VARCHAR(12),	NOT NULL,
+	persoonlijkheidstype		VARCHAR(12)		NOT NULL,
+	persoonlijkheidsvoorkeur	VARCHAR(12)		NOT NULL,
 	CONSTRAINT gebruikers_pk PRIMARY KEY (nickname)
 );
 
@@ -25,4 +25,11 @@ CREATE TABLE merkvoorkeuren(
 	CONSTRAINT merkvoorkeuren_pk PRIMARY KEY (nickname, merk),
 	CONSTRAINT merkvoorkeuren_fk1 FOREIGN KEY (nickname) REFERENCES gebruikers(nickname),
 	CONSTRAINT merkvoorkeuren_fk2 FOREIGN KEY (merk) REFERENCES merken(merk)
+);
+
+CREATE TABLE likes (
+	van      		VARCHAR(20)    	NOT NULL,
+	naar			VARCHAR(20)		NOT NULL,
+	CONSTRAINT likes_fk1 FOREIGN KEY (van) REFERENCES gebruikers(nickname),
+	CONSTRAINT likes_fk2 FOREIGN KEY (van) REFERENCES gebruikers(nickname)
 );

@@ -21,7 +21,7 @@ class Profiel_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function getInfo($nickname)
+	public function getInfo($nickname, $kort)
 	{
 		$this->load->database();
 		$sql = "SELECT * FROM gebruikers WHERE nickname = ?";
@@ -56,6 +56,12 @@ class Profiel_model extends CI_Model {
 			array('Persoonlijkheidsvoorkeur', $data->persoonlijkheidsvoorkeur),
 			array('Merkvoorkeuren', $merkvoorkeuren) 
 		);
+
+		if ($kort)
+		{
+			$result[7][1] = substr($result[7][1], 0, 50);
+		}
+
 		return $result;
 	}
 
@@ -63,7 +69,18 @@ class Profiel_model extends CI_Model {
 	{
 		if ($array == array('geen'))
 		{
-			$nicknames = array('PietjeP', 'Henkie', 'Ingridje', 'PietjeP2', 'Henkie2', 'Ingridje2');
+			$this->load->database();
+			$query = $this->db->query("SELECT nickname FROM gebruikers");
+
+			$nicknames = array();
+			$start = rand(0, ($query->num_rows() - 6));
+			for ($i = $start; $i < $start + 6; $i++)
+			{
+				if ($query->num_rows() > $i)
+				{
+					$nicknames[$i] = $query->row($i)->nickname;
+				}	
+			}
 		}
 		else
 		{
@@ -78,16 +95,26 @@ class Profiel_model extends CI_Model {
 			$nicknames = array('PietjeP', 'Henkie', 'Ingridje', 'PietjeP2', 'Henkie2', 'Ingridje2');
 
 		}*/
+		
+		$gevonden = false;
+		echo '<div>';
 		foreach($nicknames as $nn)
 		{
+			$gevonden = true;
 			echo '<div>';
-			$info = $this->Profiel_model->getInfo($nn);
+			$info = $this->Profiel_model->getInfo($nn, true);
 			foreach($info as $item)
 			{
 				echo '<p>'. $item[0] . ': ' . $item[1] . '</p>';
 			}
 			echo '</div><br>';
 		}
+
+		if (! $gevonden)
+		{
+			echo '<p>Geen resultaten gevonden</p>';
+		}
+		echo '</div>';
 	}
 
 	public function setInfo($info)
@@ -129,8 +156,7 @@ class Profiel_model extends CI_Model {
 		
 		if ($query->num_rows() > 0)
 		{
-			//return $query->row;
-			return 'succes';
+			return $query->row()->nickname;
 		}
 		else
 		{
@@ -140,21 +166,118 @@ class Profiel_model extends CI_Model {
 
 	public function profielen($geslacht, $leeftijdmin, $leeftijdmax, $persoonlijkheidsvoorkeur, $merkvoorkeuren)
 	{
+		$this->load->helper('date');
+
 		$this->load->database();
-		$sql = "SELECT nickname FROM gebruikers WHERE geslacht = ?";
+		$sql = "SELECT nickname, geboortedatum FROM gebruikers WHERE geslacht = ?";
 		$query = $this->db->query($sql, array($geslacht));
 
+		//$debug = '';
+
 		$data = array();
-		for ($i = 0; $i < 6; $i++)
+		$max = 6;
+		for ($i = 0; $i < $max; $i++)
 		{
 			if ($query->num_rows() > $i)
 			{
-				$data[$i] = $query->row($i)->nickname;
-				//echo $data[$i];
+				//$leeftijd = (now() - mysql_to_unix($query->row($i)->geboortedatum)) / (365.25 * 24 * 60 * 60);
+				/*$leeftijd = (timespan(mysql_to_unix($query->row($i)->geboortedatum), now())) / (365.25 * 24 * 60 * 60);
+				
+				return $leeftijd;
+				if ($leeftijd > $leeftijdmin && $leeftijd < $leeftijdmax)
+				{*/
+					$data[$i] = $query->row($i)->nickname;
+				//$debug .= $data[$i];
+				/*}
+				else
+				{
+					$max++;
+				}*/
 			}	
 		}
 
 		$this->load->model('Profiel_model');
 		return $this->Profiel_model->get6($data);
+		//return $debug;
+	}
+
+	public function likes($mode, $nickname)
+	{
+		if ($mode == 0) //geliked
+		{
+			$this->load->database();
+			$sql = "SELECT van FROM likes WHERE naar = ?";
+			$query = $this->db->query($sql, array($nickname));
+
+			$nicknames = array();
+			for ($i = 0; $i < 6; $i++)
+			{
+				if ($query->num_rows() > $i)
+				{
+					$nicknames[$i] = $query->row($i)->van;
+				}	
+			}
+
+			return $this->Profiel_model->get6($nicknames);
+		}
+		else if ($mode == 1) //mijn likes
+		{
+			$this->load->database();
+			$sql = "SELECT naar FROM likes WHERE van = ?";
+			$query = $this->db->query($sql, array($nickname));
+
+			$nicknames = array();
+			for ($i = 0; $i < 6; $i++)
+			{
+				if ($query->num_rows() > $i)
+				{
+					$nicknames[$i] = $query->row($i)->naar;
+				}	
+			}
+
+			return $this->Profiel_model->get6($nicknames);
+		}
+		else if ($mode == 2) //wederzijds
+		{
+			$this->load->database();
+			$sql = "SELECT naar FROM likes WHERE van = ?";
+			$query = $this->db->query($sql, array($nickname));
+
+			$mijn = array();
+			for ($i = 0; $i < 6; $i++)
+			{
+				if ($query->num_rows() > $i)
+				{
+					$mijn[$i] = $query->row($i)->naar;
+				}	
+			}
+
+			$sql = "SELECT van FROM likes WHERE naar = ?";
+			$query = $this->db->query($sql, array($nickname));
+
+			$andere = array();
+			for ($i = 0; $i < 6; $i++)
+			{
+				if ($query->num_rows() > $i)
+				{
+					$andere[$i] = $query->row($i)->van;
+				}	
+			}
+
+			$wederzijds = array();
+			foreach($mijn as $mijnlike)
+			{
+				if (in_array($mijnlike, $andere))
+				{
+					array_push($wederzijds, $mijnlike);
+				}
+			}
+
+			return $this->Profiel_model->get6($wederzijds);
+		}
+		else
+		{
+			return '<p>Er is iets misgegaan</p>';
+		}
 	}
 }

@@ -7,6 +7,8 @@
 		</p>
 	</div>
 </div>
+<br>
+<br>
 <div id="profielen">
 		<div class="profiel">
 		<img class="part" src="https://www.students.science.uu.nl/~4301358/wt3/public/profielfoto.jpg" alt="Profielfoto van ...">

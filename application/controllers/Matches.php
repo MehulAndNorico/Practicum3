@@ -16,15 +16,24 @@ class Matches extends CI_Controller {
 		$this->load->database();
 		$sql = "SELECT geslachtsvoorkeur FROM gebruikers WHERE nickname = ?";
 		$query = $this->db->query($sql, array($data['nickname']));
-		$geslacht = $query->row();
+		if ($query->num_rows() > 0)
+		{
+			$geslacht = $query->row()->geslachtsvoorkeur;
 
-		$leeftijdmin = '';
-		$leeftijdmax = '';
-		$persoonlijkheidsvoorkeur = '';
-		$merkvoorkeuren = '';
+			$leeftijdmin = '';
+			$leeftijdmax = '';
+			$persoonlijkheidsvoorkeur = '';
+			$merkvoorkeuren = '';
 
-		$this->load->model('Profiel_model');
-		$data['content'] = $this->Profiel_model->profielen($geslacht, $leeftijdmin, $leeftijdmax, $persoonlijkheidsvoorkeur, $merkvoorkeuren);
+			$this->load->model('Profiel_model');
+			//$data['content'] = $geslacht;
+			$data['content'] = $this->Profiel_model->profielen($geslacht, $leeftijdmin, $leeftijdmax, $persoonlijkheidsvoorkeur, $merkvoorkeuren);
+		}
+		else
+		{
+			$data['content'] = '<p>Geen matches gevonden</p>';
+		}
+
 		$this->load->view('head', $data);
 		$this->load->view('content', $data);
 		$this->load->view('foot', $data);
